@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: huzaifaibrarpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: huzaifaibrarpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: huzaifaibrarpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: huzaifaibrarpipelinesjavascriptdocker 
+          image: mycontainerregistry57.azurecr.io/huzaifaibrarpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
